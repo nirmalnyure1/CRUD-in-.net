@@ -1,0 +1,53 @@
+﻿@model Ecommerce.Models.Category
+
+<form method="post" >
+    <input  asp-for="Id" hidden/>
+
+    <div>
+        <div>
+            <h2>Edit category</h2>
+        </div>
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <label asp-for="Name"></label>
+                    </div>
+                    <div>
+                        <input asp-for="Name" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+
+                </div>
+                <div>
+                    <div>
+                        <label asp-for="DisplayOrder"></label>
+                    </div>
+                    <div>
+                        <input asp-for="DisplayOrder" />
+                        <span asp-validation-for="DisplayOrder" class="text-danger"></span>
+
+                    </div>
+
+                </div>
+                <div>
+                    <div>
+                        <div>
+                            <input type="submit" class="btn btn-info" value="Update" />
+                        </div>
+                        <div>
+                            <a asp-action="Index" class="btn btn-primary">Back</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

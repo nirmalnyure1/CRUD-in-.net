@@ -1,0 +1,37 @@
+﻿@model Ecommerce.Models.ApplicationType
+
+<form method="post"  asp-action="DeletePost">
+    <input asp-for="Id" hidden />
+
+    <div>
+        <div>
+            <h2>Delete category</h2>
+        </div>
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <label asp-for="Name"></label>
+                    </div>
+                    <div>
+                        <input asp-for="Name" disabled />
+
+                    </div>
+
+                </div>
+               
+                <div>
+                    <div>
+                        <div>
+                            <input type="submit" class="btn btn-danger" value="Delete" />
+                        </div>
+                        <div>
+                            <a asp-action="Index" class="btn btn-primary">Back</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
